@@ -1,0 +1,25 @@
+﻿#foto {
+    width: 200px;
+    margin: 2rem 0;
+    border-radius: 45%
+}
+.seccion-bienvenida{
+    margin: 5rem 0 10rem 0;
+    color: white;
+}
+.seccion-bienvenida h1{
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-size: 1.25rem;
+}
+#imagen-dotnet{
+     width: 500px;
+}
+.cabecera{
+    font-weight: bold;
+}
+
+.habilidades ul{
+    list-style: none;
+    padding-left: 0;
+}
