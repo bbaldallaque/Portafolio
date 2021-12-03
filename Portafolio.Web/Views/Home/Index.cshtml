@@ -1,79 +1,10 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-    }
-<div class="text-center">
-    <h1 class="display-4">Soy Bryant Stewart</h1>
-    <h2>Back-End especializado en tecnogia .NET</h2>
+﻿@model HomeIndexViewModel
+@{
+   ViewData["Title"] = "Pagina Principal";
+}
 
-    <img id="foto"
-    src="~/image/WhatsApp Image 2021-12-01 at 9.42.21 PM.jpeg" alt="Foto de Bryant"/>
-</div>
+<partial name="_Presentacion" />
+<partial name="_Habilidades" />
+<partial name="_proyectosParaMostrar" model="Model.Proyectos"/>
 
-<div class="text-center">
-    <img id="imagen-dotnet" src="~/image/ASP-NET-Core-Logo-1.png" alt="foto de dotnet"/>
 
-</div>
-
-<div class="row justify-content-center text-center bg-primary">
-    <div class="col col-md-7 seccion-bienvenida">
-        <h1>Te doy la bienvenida a mi portafolio</h1>
-        <p>
-            Desarollo de software desde el 2015 trabajando profecionalmente, para empresas tales como: RMC, Maritima Dominicana y Santo Domingo Motors;
-            tuve el privilegio de trabajar 7 años en el estado dominicano en Sistema Unido de Beneficiarios (SIUBEN). Lo cual me permitio conocer los dos mundos tanto el desarollo del software como la parte administrativa de un proyecto (Project management)
-            todos estos  puesto con tecnologias C#/ASP.NET, SQL, Entity Framework, entre otros.
-        </p>
-    </div>
-</div>
-
-<div style="margin-top: -105px">
-<div class="row justify-content-md-center text-center">
-     <div class="col col-3 bg-white habilidades" style="border-radius: 15px 0 0 15px; box-shadow: 0 5px 5px 0 gray; border-radius: 0 15px 0 15px; box-shadow: 0 5px 5px 0 gray">
-         <h3>Back-end</h3>
-         <p>
-             Pruebas automaticas y puesta en producción con entregas continuas
-         </p>
-         <p class="text-primary cabecera">
-             Stack:
-         </p>
-         <p>
-             ASP.NET Core, SQl Server
-         </p>
-         <p  class="text-primary cabecera">
-             Experiencia:
-         </p>
-         <ul>
-             <li>Web APIs</li>
-             <li>Rest Client</li>
-             <li>Entity Framework Core</li>
-             <li>Integración SAP-DotNet</li>
-             <li>Queris</li>
-             <li>ASP.NET Core MVC</li>
-             <li>Principios SOLID</li>
-         </ul>
-     </div>
-
-      @*  <div class="col col-3 bg-white">
-          <h3>Front-end</h3>
-          <p>Puedo crear frond-ends robustos los cuales cumplen con los requerimientos del negocio
-
-          </p>
-        <p class="text-primary cabecera">
-             Stack:
-         </p>
-         <p>
-             ASP.NET Core, SQl Server
-         </p>
-         <p  class="text-primary cabecera">
-             Experiencia:
-         </p>
-         <ul>
-             <li>Web APIs</li>
-             <li>Rest Client</li>
-             <li>Entity Framework Core</li>
-             <li>Integración SAP-DotNet</li>
-             <li>Queris</li>
-             <li>ASP.NET Core MVC</li>
-             <li>Principios SOLID</li>
-         </ul>*@
-     </div>
-</div>
