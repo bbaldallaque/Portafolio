@@ -7,13 +7,13 @@ namespace Portafolio.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
         private readonly IRepositorioProyectos repositorioProyectos;
+        private readonly IServicioEmial servicioEmial;
 
-        public HomeController(ILogger<HomeController> logger, IRepositorioProyectos repositorioProyectos)
+        public HomeController(IRepositorioProyectos repositorioProyectos, IServicioEmial servicioEmial)
         {
-            _logger = logger;
             this.repositorioProyectos = repositorioProyectos;
+            this.servicioEmial = servicioEmial;
         }
 
         public IActionResult Index()
@@ -28,7 +28,20 @@ namespace Portafolio.Web.Controllers
             var proyectos = repositorioProyectos.ObtenerProyectos();
             return View(proyectos); 
         }
+
         public IActionResult Contacto()
+        {      
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Contacto(ContactoViewModel contactoViewModel)
+        {
+            await servicioEmial.Enviar(contactoViewModel);
+            return RedirectToAction("Gracias");
+        }
+
+        public IActionResult Gracias()
         {
             return View();
         }
